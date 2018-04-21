@@ -38,8 +38,8 @@ class ListSourceViewHolder extends RecyclerView.ViewHolder
     }
 
     @Override
-    public void onClick(View v) {
-        itemClickListener.onClick(v,getAdapterPosition(),false);
+    public void onClick(View view) {
+        itemClickListener.onClick(view,getAdapterPosition(),false);
     }
 }
 
@@ -66,6 +66,6 @@ public class ListSourceAdapter extends RecyclerView.Adapter<ListSourceViewHolder
 
     @Override
     public int getItemCount() {
-        return WebSite.getSources().size();
+        return webSite.getSources().size();
     }
 }

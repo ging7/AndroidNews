@@ -1,6 +1,8 @@
 package com.example.ging.androidnews.Common;
 
+import com.example.ging.androidnews.Interface.IconBetterIdeaService;
 import com.example.ging.androidnews.Interface.NewsService;
+import com.example.ging.androidnews.Remote.IconBetterIdeaClient;
 import com.example.ging.androidnews.Remote.RetrofitClient;
 
 /**
@@ -14,5 +16,9 @@ public class Common {
 
     public static NewsService getNewsService(){
         return RetrofitClient.getClient(BASE_URL).create(NewsService.class);
+    }
+
+    public static IconBetterIdeaService getIconService(){
+        return IconBetterIdeaClient.getClient().create(IconBetterIdeaService.class);
     }
 }
